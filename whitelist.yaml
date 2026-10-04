@@ -1,4 +1,4 @@
-#profile-title: 🏳 #РосКомПозор | Белые списки · Clash
+#profile-title: 🏳#РосКомПозор | Белые списки • Clash
 #profile-update-interval: 2
 #support-url: https://t.me/RKP_channel
 #announce: ⚠️ - Конфиг без шифрования трафика.
@@ -7,107 +7,15 @@
 #announce: Свобода заключается в смелости! #СвободаИнтернету
 #subscription-userinfo: upload=0; download=0; total=0; expire=0
 
-'mixed-port': 7890
-'allow-lan': false
-'mode': 'rule'
-'log-level': 'info'
-'proxies':
-- 'name': '🇷🇺 Россия [#РКП]'
-  'type': 'hysteria2'
-  'server': '91.240.86.70'
-  'port': 22443
-  'password': '3f63c86c-ac4a-4900-85cf-4fedf93c2ca5'
-  'udp': true
-  'sni': 'hy.quattro-tech.ru'
-- 'name': '🏴 Неизвестный [#РКП]'
-  'type': 'vless'
-  'server': '91.210.169.181'
-  'port': 443
-  'uuid': 'ff0b6ba8-bed0-4c4d-bbc9-23af47582615'
-  'udp': true
-  'tls': true
-  'servername': 'wstg.datasynctrue.online'
-  'client-fingerprint': 'random'
-  'network': 'ws'
-  'ws-opts':
-    'path': '/api/connect'
-    'headers':
-      'Host': 'wstg.datasynctrue.online'
-- 'name': '🏴 Неизвестный [#РКП] (2)'
-  'type': 'vless'
-  'server': '200.165.231.209'
-  'port': 443
-  'uuid': 'ff0b6ba8-bed0-4c4d-bbc9-23af47582615'
-  'udp': true
-  'tls': true
-  'servername': 'wstg.datasynctrue.online'
-  'client-fingerprint': 'random'
-  'network': 'ws'
-  'ws-opts':
-    'path': '/api/connect'
-    'headers':
-      'Host': 'wstg.datasynctrue.online'
-- 'name': '🏴 Неизвестный [#РКП] (3)'
-  'type': 'vless'
-  'server': '188.225.33.141'
-  'port': 443
-  'uuid': 'ff0b6ba8-bed0-4c4d-bbc9-23af47582615'
-  'udp': true
-  'tls': true
-  'servername': 'wstg.datasynctrue.online'
-  'client-fingerprint': 'random'
-  'network': 'ws'
-  'ws-opts':
-    'path': '/api/connect'
-    'headers':
-      'Host': 'wstg.datasynctrue.online'
-- 'name': '🏴 Неизвестный [#РКП] (4)'
-  'type': 'vless'
-  'server': 'qq.utiltools.site'
-  'port': 443
-  'uuid': '4054fdc2-ee80-4419-8a8e-d937df4719e2'
-  'udp': true
-  'tls': true
-  'servername': 'qq.utiltools.site'
-  'client-fingerprint': 'random'
-  'reality-opts':
-    'public-key': 'drY21DHNOr6ezJLA2B10mzTExeJ9-gVBfTBNLwVBtWI'
-  'flow': 'xtls-rprx-vision'
-- 'name': '🏴 Неизвестный [#РКП] (5)'
-  'type': 'vless'
-  'server': '78.159.250.214'
-  'port': 443
-  'uuid': '4054fdc2-ee80-4419-8a8e-d937df4719e2'
-  'udp': true
-  'tls': true
-  'servername': 'qq.utiltools.site'
-  'client-fingerprint': 'random'
-  'reality-opts':
-    'public-key': 'drY21DHNOr6ezJLA2B10mzTExeJ9-gVBfTBNLwVBtWI'
-    'short-id': '00000000'
-  'flow': 'xtls-rprx-vision'
-'proxy-groups':
-- 'name': 'CONFIGS'
-  'type': 'select'
-  'proxies':
-  - 'AUTO'
-  - '🇷🇺 Россия [#РКП]'
-  - '🏴 Неизвестный [#РКП]'
-  - '🏴 Неизвестный [#РКП] (2)'
-  - '🏴 Неизвестный [#РКП] (3)'
-  - '🏴 Неизвестный [#РКП] (4)'
-  - '🏴 Неизвестный [#РКП] (5)'
-- 'name': 'AUTO'
-  'type': 'url-test'
-  'url': 'http://www.gstatic.com/generate_204'
-  'interval': 300
-  'tolerance': 50
-  'proxies':
-  - '🇷🇺 Россия [#РКП]'
-  - '🏴 Неизвестный [#РКП]'
-  - '🏴 Неизвестный [#РКП] (2)'
-  - '🏴 Неизвестный [#РКП] (3)'
-  - '🏴 Неизвестный [#РКП] (4)'
-  - '🏴 Неизвестный [#РКП] (5)'
-'rules':
-- 'MATCH,CONFIGS'
+proxy-groups:
+- name: PROXY
+  type: select
+  use:
+    - "🏳#РосКомПозор | Белые списки • Clash"
+
+proxy-providers:
+  "🏳#РосКомПозор | Белые списки • Clash":
+    type: http
+    url: "https://raw.githubusercontent.com/RKPchannel/RKP_bypass_configs/refs/heads/main/whitelist.txt"
+    path: ./proxy_providers/whitelist.yaml
+    interval: 7200
