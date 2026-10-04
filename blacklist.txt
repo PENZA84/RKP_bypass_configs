@@ -1,4 +1,4 @@
-#profile-title: 🏴 #РосКомПозор | Чёрные списки
+#profile-title: 🏴#РосКомПозор | Чёрные списки
 #profile-update-interval: 2
 #support-url: https://t.me/RKP_channel
 #announce: ⚠️ - Конфиг без шифрования трафика.
